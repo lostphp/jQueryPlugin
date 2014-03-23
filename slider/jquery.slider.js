@@ -10,28 +10,35 @@ function slider(obj){
 }
 
 slider.prototype = {
-
 	//调试错误数据
 	D : function(err, bool){if(bool){console.log(err);}},
-	
-
 	init : function(obj){
+		
 
 		//父级元素
 		var sliderparent = $(obj.id);
 		if(typeof sliderparent[0] == 'undefined'){
 			//滑动方向
 			slider.prototype.D("object init fail!!!", obj.debug);
+		}else{
+			slider.prototype.S_filter(obj);
+		}
+	},
+
+	//浮动
+	S_filter: function(obj){
+		//父级元素
+		var sliderparent = $(obj.id);
+		if(typeof obj.direction == 'undefined'){//一共4个的方向left,right,up,down
+			obj.direction = 'left';
+		}
+	
+		var time = obj.time;
+		if(typeof time == 'undefined'){//滑动时间
+			time = 3000;
 		}
 
-		//滑动时间
-		var time = obj.id;
-		if(typeof time == 'undefined'){
-			time = 3000;
-		}	
-
-
-		var len = obj.len;
+			var len = obj.len;
 		if(typeof len != 'undefined'){//判断是是否自
 			len  = ($(sliderparent).children()).length;
 		}
@@ -58,9 +65,6 @@ slider.prototype = {
 			});
 		});
 		
-		//console.log(obj);
-
-		return this;
 	},
 
 	//执行滑块操作
@@ -69,7 +73,7 @@ slider.prototype = {
 	}, 
 
 	//下一个元素
-	next : function(){
+	next : function(obj){
 		  
 	},
 
