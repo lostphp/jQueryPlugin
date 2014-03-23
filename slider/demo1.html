@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="./jquery.slider.js"></script>
+		<title>滑块1实例(轮播效果)</title>
+		<style>
+			*{padding:0;margin:0;text-decoration:none;}
+		</style>
+	</head>
+	<body>
+		<!-- 滑块1实例(轮播效果) -->
+		<!--<div id="slider2" style="overflow:hidden;height:375px;">
+			<img class="img" src="img/1.png">
+			<img class="img" src="img/2.png">
+			<img class="img" src="img/3.png">
+		</div>-->
+
+		<div id="slider" style="position:relative;height:375px;">
+			<img class="img" style="position:relative;float:left;width:500px;height:375px;" src="img/1.png">
+			<img class="img" style="position:relative;float:left;width:500px;height:375px;" src="img/2.png">
+			<img class="img" style="position:relative;float:left;width:500px;height:375px;" src="img/3.png">
+		</div>
+
+		
+		<script type="text/javascript" charset="utf-8">
+			$.fn.slider({id:"#slider", time:1000, len:"12", debug:1});	
+		</script>
+	</body>
+</html>
