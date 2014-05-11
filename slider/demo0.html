@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
+        <script type="text/javascript" src="./jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="./jquery.slider.js"></script>
+		<title>滑块1实例(轮播效果)</title>
+		<style>
+			*{padding:0;margin:0;text-decoration:none;}
+		</style>
+	</head>
+	<body>
+
+		<!-- 轮播模型 -->
+		<div>
+			<div id="slider" style="width:501px;height:375px;margin-top:40px;margin-left:400px;position:relative;">
+				<!-- 图片展示区 -->
+				<div class="slider" style="width:501px;height:375px;">
+					<a href="#"><img src="img/1.png" /></a>
+            		<a href="#"><img src="img/2.png" /></a>
+           			<a href="#"><img src="img/3.png" /></a>
+				</div>
+
+				<!-- 左右装换框 left right -->
+				<div class="prevBtn" style="display: block;height: 40px;line-height: 40px;overflow: hidden;position: absolute;text-align:center;top:120px;left:0px;width:40px;color: #fff;font-size:30px;cursor:pointer;background-color: rgba(0,0,0,0.3);font-weight:bold;"><</div>
+				<div class="nextBtn" style="display: block;height: 40px;line-height: 40px;overflow: hidden;position: absolute;text-align:center;top:120px;right:0px;width: 40px;color: #fff;font-size:30px;cursor:pointer;background-color: rgba(0,0,0,0.3);font-weight:bold;">></div>
+
+				<div class="list">
+					<ul style="float:left;display:block;color:red;z-index:999;list-style:none;position:absolute;bottom:10px;right:200px;">
+						<li style="float:left;"><a style="cursor:pointer;display: block;padding-top: 9px;width: 9px;height: 0;-webkit-border-radius: 50%;-moz-border-radius: 50%;-ms-border-radius: 50%;-o-border-radius: 50%;border-radius: 50%;background: red;overflow: hidden;"></a></li>
+
+						<li style="float:left;margin-left:5px;"><a style="cursor:pointer;display: block;padding-top: 9px;width: 9px;height: 0;-webkit-border-radius: 50%;-moz-border-radius: 50%;-ms-border-radius: 50%;-o-border-radius: 50%;border-radius: 50%;background: red;overflow: hidden;"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

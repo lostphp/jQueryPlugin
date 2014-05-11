@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
+        <script type="text/javascript" src="./jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="./jquery.slider.js"></script>
+		<title>滑块1实例(轮播效果)</title>
+		<style>
+			*{padding:0px;margin:0px;text-decoration:none;}
+		</style>
+	</head>
+	<body>
+
+    <!-- 轮播模板 -->
+    <div>
+        <div id="slider" style="width:500px;height:375px;margin-top:40px;margin-left:400px;">
+            <!-- 图片展示区 -->
+            <div class="slider" style="width:500px;height:375px;">
+                <div style="display:block;"><a href="#" ><img src="img/1.png" /></a></div>
+                <div style="display:block;"><a href="#" ><img src="img/2.png" /></a></div>
+                <div style="display:block;"><a href="#" ><img src="img/3.png" /></a></div>
+            </div>
+
+            <!-- 左右装换框 left right -->
+            <div class="prevBtn" style="height:40px;width:40px;"><</div>
+			<div class="nextBtn" style="height:40px;width:40px;">></div>
+	
+			<!-- 下面列表 -->
+            <div class="list">
+                <ul style="float:left;display:block;color:red;">
+                    <li><a style="padding-top: 9px;width: 9px;height: 0;overflow: hidden;"></a></li>
+					<li><a style="padding-top: 9px;width: 9px;height: 0;overflow: hidden;"></a></li>
+					<li><a style="padding-top: 9px;width: 9px;height: 0;overflow: hidden;"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+$.slider({
+    wrap:'#slider',
+    PicList:"#slider .slider",
+	prevBtn:'#slider .prevBtn',
+    nextBtn:'#slider .nextBtn',
+    list:'#slider .list',
+    debug:1,
+    delay:3000,
+});
+</script>
+	</body>
+</html>
