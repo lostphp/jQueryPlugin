@@ -1,0 +1,40 @@
+<html>
+<head>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<!--<script type="text/javascript" src="jquery-1.7.2.min.js"></script> -->
+<script type="text/javascript" src="jquery.plugins.contextMenus.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 禁止缓存 -->
+<!--<meta http-equiv="Cache-Control" content="no-store, must-revalidate" /> -->
+</head>
+<body>  
+	<span>右击显示效果</span>
+<script>
+
+$.contextMenus({
+	color:'#45649e',
+	boxShadow :'1px 1px 2px rgb(50, 50, 50)',
+	//fontFamily : 'tahoma, helvetica, clean, sans-serif',
+	fontSize : '12px',
+	backgroundColor : '#fff',
+	width : '190' + 'px',
+	height : '0px',
+	position: 'fixed',
+	overflow:'hidden',
+	cursor : 'pointer',
+	border:'1px solid #b8cbcb',
+	webkitBoxShadow : '2px 2px 5px rgb(50, 50, 50)',
+	mozBoxShadow : '2px 2px 5px rgb(50, 50, 50)',
+	overflow : 'hidden',
+}).insert(
+[
+{value:'hello world!' , callback:function(){
+	alert('hellow world!');
+}},
+{value:'test1', callback:function(){
+	console.log('test');
+}},
+]).show();
+	</script>
+</body>
+</html>
