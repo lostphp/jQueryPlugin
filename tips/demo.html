@@ -1,0 +1,125 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
+		<script type="text/javascript" src="./jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="./jquery.tips.js"></script>
+		<title>tips(tips效果)</title>
+		<style>
+			*{padding:0px;margin:0px;text-decoration:none;}
+		</style>
+	</head>
+	<body>
+
+    <!-- tips -->
+    <div>
+        <div id="slider" style="background:red;width:500px;height:100px;margin-top:40px;margin-left:400px;"></div>
+    </div>
+
+    <div style="clear:both;"></div>
+
+<div style="clear:both;"></div>
+<!-- (下) -->
+<div class="main" style="border:1px solid groove;">
+	<div class="p-div" style="width:200px; position:relative;">
+		<div class="p-pointer" style="font-size:16px; position:absolute; left:10px; top:-8px;">
+			<span class="p-pointer1" style="color:#FF9900; position:absolute; left:10px; top:-1px;">◆</span>
+			<span class="p-pointer2" style="color:#FFFFCC; position:absolute; left:10px; top:0;">◆</span>
+		</div>
+		<div class="p-con" style="padding:5px; border:1px solid #FF9900; background:#FFFFCC;">这里是内容</div>
+	</div>
+</div>
+
+<hr />
+<div style="height:100px;"></div>
+<div style="clear:both;"></div>
+
+<!-- 左 -->
+<div class="main2" style="border:1px solid groove;">
+	<div class="p-div" style="width:200px; position:relative;">
+		<div class="p-pointer" style="font-size:16px; position:absolute; right:8px; top:16px;">
+			<span class="p-pointer1" style="color:#FF9900; position:absolute; left:0px; top:-10px;">◆</span>
+			<span class="p-pointer2" style="color:#FFFFCC; position:absolute; left:-1px; top:-10;">◆</span>
+			<!-- #FFFFCC -->
+		</div>
+		<div class="p-con" style="padding:5px; border:1px solid #FF9900; background:#FFFFCC;">这里是内容</div>
+	</div>
+</div>
+
+
+<hr />
+
+<div style="clear:both;"></div>
+<div style="height:100px;"></div>
+<!-- 右 -->
+<div class="main3" style="border:1px solid groove;">
+	<div style="width:200px; position:relative;">
+		<div style="font-size:16px;position:absolute;left:8px;top:16px;">
+			<span style="color:#FF9900;position:absolute;right:0px;top:-10px;">◆</span>
+			<span style="color:#FFFFCC;position:absolute;right:-1px;top:-10px;">◆</span>
+			<!-- #FFFFCC -->
+		</div>
+		<div style="padding:5px; border:1px solid #FF9900; background:#FFFFCC;">这里是内容</div>
+	</div>
+</div>
+<div style="clear:both;"></div>
+
+
+<hr />
+<!-- 下 -->
+<div style="clear:both;"></div>
+<div style="height:100px;"></div>
+<div class="main4" style="border:1px solid groove;">
+	<div style="width:200px; position:relative;">
+		<div style="font-size:16px; position:absolute; left:16px; bottom:0px;">
+			<span style="color:#FF9900; position:absolute; left:0px; top:-9px;">◆</span>
+			<span style="color:#FFFFCC; position:absolute; left:0px; top:-10px;">◆</span>
+			<!-- #FFFFCC -->
+		</div>
+		<div style="padding:5px;border:1px solid #FF9900;background:#FFFFCC;">这里是内容</div>
+	</div>
+</div>
+<div style="clear:both;"></div>
+
+
+<div style="height:100px;"></div>
+
+<script>
+
+//
+$('#slider').tips({
+	eventName:'mouseover',
+	orientation:'left',
+	style:{
+		width:100,
+		height:100,
+		//border:'1px solid red',//边框
+		border:'1px solid #FF9900',//边框
+		borderColor: '#FF9900',//边框颜色
+		backgroundColor:'#FFFFCC', //背景颜色
+		padding: 5, //内填充
+		cPOS: 7, //像素
+		pPOS: 0, //目标的位置
+	}
+});
+
+$('#slider').tips({
+	eventName:'mouseover',
+    orientation:'right',
+    content:'逗比',
+});
+
+$('#slider').tips({
+	eventName:'mouseover',
+    orientation:'top',
+    content:'top',
+});
+
+$('#slider').tips({
+	eventName:'mouseover',
+	orientation:'bottom',
+});
+
+</script>
+	</body>
+</html>
