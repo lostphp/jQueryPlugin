@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script src="./jquery.dropdown.js"></script>
+    <title>输入框提示列表效果</title>
+
+
+</head>
+<body>
+    <!-- test -->
+<form action="" id="Fid">
+<input type="text" id="m_txt" name="txt" style="height:50px;width:300px;" />
+</form>
+
+
+<!--<div id="test_dd" style="position:absoulte;border:1px solid #817F82;font:14px;font-family:'Microsoft Yahei';cursor:pointer;display:none;">
+    <ul style="list-style:none;padding:0px;width:100%;margin:0px;">
+        <li style="color:#000;width:100%;height:30px;line-height:30px;text-indent:1px;"><span style="width:100%;">nihao<b>美女</b></span></li>
+        <li style="color:#000;width:100%;height:30px;line-height:30px;text-indent:1px;"><span style="width:100%;">nihao<b>bb</b></span></li>
+        <li style="color:#000;width:100%;height:30px;line-height:30px;text-indent:1px;"><span style="width:100%;">nihao<b>cc</b></span></li>
+    </ul>
+</div> -->
+
+
+
+
+<script>
+$.fn.dropdown({selector:'m_txt', FormID:'Fid'});
+</script>
+</body>
+</html>
+
