@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script src="./jquery.zoom.js"></script>
+	<title>放大镜效果</title>
+</head>
+<body>
+<div>
+	<img id="img_zoom" src="./demo.jpg" style="width:300px;margin-left:0px;"/>
+</div>
+<script>
+$(document).ready(function(){
+	$.zoom({
+		selected:'#img_zoom',
+		markSize:[100, 100], //遮罩大小
+		zoomBox:[600, 600],  //与上面的比例要一致
+		left: 10,
+		top : 0,
+	});	
+});
+</script>
+</body>
+</html>
