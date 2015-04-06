@@ -77,8 +77,8 @@ function sidebar(posH, time){
 
 //配置
 var mobileDebugConfig = {
-	id:'mobile_debug3',
-	debug:false,//true,Chrome调试显示错误,false,不显示
+	id:'mobile_debug',
+	debug:true,//true,Chrome调试显示错误,false,不显示
 	version:'1.0',
 	Height:200,
 	headHeight:30,
@@ -130,6 +130,7 @@ var mobileDebugDivInfo = CDiv();
 mobileDebugDivInfo.style.height = "170px";
 mobileDebugDivInfo.style.borderTop = "1px solid #E6E6E6";
 mobileDebugDivInfo.style.overflowY = "scroll";
+mobileDebugDivInfo.style.backgroundColor = "#fff";
 mobileDebugDiv.appendChild(mobileDebugDivInfo);
 
 mobileDiv.appendChild(mobileDebugDiv);
@@ -231,8 +232,13 @@ window.d = window.D = function(obj){
 	left.style.float = "left";
 	left.innerHTML = textShow;
 	info.appendChild(left);
-	mobileDebugDivInfo.appendChild(info);
 
+	var right = CDiv();
+	right.style.float = "right";
+	right.innerHTML = "time:" + new Date();
+	info.appendChild(right);
+
+	mobileDebugDivInfo.insertBefore(info, mobileDebugDivInfo.getElementsByClassName('info')[0]);
 	if(Gid(mobileDebugConfig.id)){load();}	
 }
 
