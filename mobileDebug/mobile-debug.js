@@ -232,6 +232,8 @@ window.d = window.D = function(obj){
 	left.innerHTML = textShow;
 	info.appendChild(left);
 	mobileDebugDivInfo.appendChild(info);
+
+	if(Gid(mobileDebugConfig.id)){load();}	
 }
 
 window.onload = function(){
