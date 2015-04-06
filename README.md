@@ -14,3 +14,4 @@ jQuery.Plugin
  - zoom 
  	- 放大镜
  - mobileDebug(非Jquery插件)
+	- 在手机上简单模拟chrome调试
