@@ -115,13 +115,13 @@ mobileDebugDiv.appendChild(mobileDebugDivHead);
 mobileDebugDivHead.onclick = function(){
 	if (this.innerHTML == "↑") {
 		this.innerHTML = "↓";
-		//mobileDebugDiv.style.top =  getWebHeight() - mobileDebugConfig.Height + "px";
+		mobileDebugDiv.style.top =  getWebHeight() - mobileDebugConfig.Height + "px";
 		//console.log(parseInt(mobileDebugDiv.style.top));
-		sidebar(getWebHeight() - mobileDebugConfig.Height);
+		//sidebar(getWebHeight() - mobileDebugConfig.Height);
 	}else{
 		this.innerHTML = "↑";
-		//mobileDebugDiv.style.top =  getWebHeight() - mobileDebugConfig.headHeight + "px";
-		sidebar(getWebHeight() - mobileDebugConfig.headHeight);
+		mobileDebugDiv.style.top =  getWebHeight() - mobileDebugConfig.headHeight + "px";
+		//sidebar(getWebHeight() - mobileDebugConfig.headHeight);
 	}
 }
 
