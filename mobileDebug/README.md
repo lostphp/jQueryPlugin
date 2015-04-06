@@ -9,4 +9,4 @@
  *	1.使用d方法代替console.log的测试。
 
 ##截图
-[![Screenshots-1.png](/mobileDebug/img/1.png)](/mobileDebug/img/1.png)
+[![Screenshots-1.png](/mobileDebug/img/img.png)](/mobileDebug/img/img.png)
