@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>form vaildata test</title>
+    <script src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script src="jquery.vaildata.js"></script>
+</head>
+<body>
+
+
+<!-- 验证邮箱 -->
+
+
+<form action="" method="POST" id="form">
+
+	邮件：<input type="text" name="" regx="email" error="请填写正确的邮件地址" point="mail_tips"/>
+	<span class="mail_tips">请输入邮件地址</span><br />
+	code：<input type="text" name="" regx="zipcode" error="请填写正确的邮编地址" point="mail_tips"/>
+	<span class="mail_tips">请输入邮件地址</span><br />
+
+
+	<input type="submit" value="submit" name="submit" />
+</form>
+
+<script type="text/javascript">
+	
+	$.validform('#form', function(i,info){
+		console.log(i, info);
+	});
+</script>
+
+
+</body>
+</html>
