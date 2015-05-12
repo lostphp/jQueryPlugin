@@ -92,6 +92,7 @@ var mobileDiv = CDiv();
 var mobileDebugDiv = CDiv();
 mobileDebugDiv.style.fontSize="12px";
 mobileDebugDiv.id = mobileDebugConfig.id;
+mobileDebugDiv.style.zIndex = 10000;
 //mobileDebugDiv.style.overflow = "hidden";
 
 var mobileDebugDivHead = CDiv();
