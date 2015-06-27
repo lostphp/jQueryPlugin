@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta http-equiv="content-type" content="text/html;charset=utf8" />
+<title>完美解决IE,Chorme,FireFox的声音播放</title>
+</head>
+<body>
+<script type="text/javascript">
+
+function playSound(url, id){
+	//判断是否是火狐
+	function is_firefox(){
+		if(navigator.userAgent.indexOf("Firefox")>0){	
+			return true;  
+		}
+		return false;
+	}
+	
+	if(typeof id == 'undefined'){
+		var id = "sound_midoks_notice";
+	}
+	
+	var strEmbed = '<div><embed id="' + id + '" name="'+ id +'" src="'+ url +'" autostart="true" hidden="true" loop="false"></embed></div>';
+	var strAudio = '<audio id="'+ id +'" src="'+ url +'" hidden="true" preload="true">';
+
+	var sound = $('#'+ id);
+
+	if(sound.length == 0){
+		if(is_firefox()){
+			strEmbed = $(strEmbed).css('display', 'none')
+		}
+		$('body').append(strEmbed);
+	}
+	
+    try{
+        sound[0].play();
+    }catch(e){
+        //console.log(e.name + ": " + e.message);
+		setTimeout(function(){
+			try{
+				//var sound = $('#'+ id);
+				sound[0].play();
+			}catch(e){
+				//console.log(e.name + "2: " + e.message);
+				var t = $('#'+ id).parent();
+				t.empty();
+				sound = $('#'+ id);
+				if(sound.length == 0){
+					t.append(strAudio);
+				}
+				
+				if(is_firefox()){
+					sound = $('#'+ id);
+					sound[0].play();
+				}
+			 }
+		}, 1000);
+    }
+	
+	return sound;
+}
+
+
+function ringin(){
+	playSound("ringin.wav", 'ringin');
+}
+
+function notice(){
+	playSound("notice.wav", 'notice');	
+}
+
+
+
+//播放一次声音
+setTimeout(function(){
+	ringin();
+}, 220);
+    
+    
+//每3秒播放一次
+setInterval(function(){
+	console.log("notice");
+	notice();
+}, 3000);
+
+</script>
+
+
+
+</body>
+</html>
